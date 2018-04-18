@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js --exec babel-node --presets es2015",
-    "semantic-release": "DEBUG=semantic-release semantic-release",
+    "up-version": "next-ver --go",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "publish": "DEBUG=* npm-publish-git-tag"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-2": "^6.11.0",
     "babel-register": "^6.11.6",
+    "next-ver": "^1.8.0",
     "nodemon": "^1.17.3",
     "npm-publish-git-tag": "^1.1.37",
     "semantic-release": "^15.1.7"
